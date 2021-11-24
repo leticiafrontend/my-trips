@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "prepare": "husky install",
-    "generate": "yarn plop --plopfile ./generators/plopfile.js"
+    "generate": "yarn plop --plopfile ./generators/plopfile.js",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "husky": {
     "hooks": {
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-typescript": "^7.15.0",
+    "@graphql-codegen/cli": "^2.3.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
@@ -63,6 +65,8 @@
     "lint-staged": "^11.2.3",
     "plop": "^2.7.6",
     "prettier": "2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "@graphql-codegen/typescript-operations": "ˆ",
+    "@graphql-codegen/typescript": "^"
   }
 }

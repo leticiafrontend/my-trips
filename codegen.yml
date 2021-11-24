@@ -1,0 +1,8 @@
+overwrite: true
+schema: "https://api-us-east-1.graphcms.com/v2/ckwcfriyb4jcu01w350cyejtn/master"
+documents: "src/services/graphql/queries.ts"
+generates:
+  src/services/graphql/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"

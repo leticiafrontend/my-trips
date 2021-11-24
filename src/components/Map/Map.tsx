@@ -3,11 +3,9 @@ import { Container } from './styles'
 import { MapProps } from './types'
 
 export const Map = ({ places }: MapProps) => {
-  const position = [51.505, -0.09]
-
   return (
     <MapContainer
-      center={position}
+      center={[0, 0]}
       zoom={3}
       style={{ height: '100%', width: '100%' }}
     >
