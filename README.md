@@ -1,10 +1,10 @@
-# My Trips
-
 <div align="center">
-   <img src="./public/cover.png" width="100%">
-</div>
+  
+# My Trips
+   <img src="./public/img/cover.png" width="100%">
 
 ### A simple website to show pinned places that you went or you want to go
+</div>
 
 ## What is inside?
 
