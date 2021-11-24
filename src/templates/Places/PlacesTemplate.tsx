@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { CloseOutline } from '@styled-icons/evaicons-outline'
 import { LinkWrapper } from 'components/LinkWrapper'
 import { Body, Container, Gallery, Heading, Wrapper } from './styles'
-import { PlacesTemplateProps } from './types'
+import { PlaceTemplateProps } from './types'
 import { useRouter } from 'next/dist/client/router'
 
 export const PlacesTemplate = ({ place }: PlaceTemplateProps) => {
@@ -22,13 +22,13 @@ export const PlacesTemplate = ({ place }: PlaceTemplateProps) => {
             dangerouslySetInnerHTML={{ __html: place.description?.html || '' }}
           />
           <Gallery>
-            {place.gallery.map(({ url, name, slug }) => (
+            {place.gallery.map((image, index) => (
               <Image
-                src={url}
-                alt={name}
-                key={slug}
-                width={1000}
-                height={600}
+                key={`photo-${index}`}
+                src={image.url}
+                alt={place.name}
+                width={image.width}
+                height={image.height}
                 quality={75}
               />
             ))}
