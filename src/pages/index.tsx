@@ -8,7 +8,7 @@ const Home = ({ places }: MapProps) => <HomeTemplate places={places} />
 
 export const getStaticProps = async () => {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
-  console.log(places)
+
   return { props: { places } }
 }
 
