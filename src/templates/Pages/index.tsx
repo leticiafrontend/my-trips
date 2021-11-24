@@ -1,0 +1,1 @@
+export { PagesTemplate } from './PagesTemplate'
