@@ -10,6 +10,7 @@ export interface PlaceTemplateProps {
     name: string
     description?: {
       html: string
+      text: string
     }
     gallery: ImageProps[]
   }
