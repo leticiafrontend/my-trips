@@ -1,4 +1,10 @@
-# This is a [Next.js](https://nextjs.org/) boilerplate
+# My Trips
+
+<div align="center">
+   <img src="./public/cover.png" width="100%">
+</div>
+
+### A simple website to show pinned places that you went or you want to go
 
 ## What is inside?
 
@@ -6,25 +12,50 @@ This project uses lot of stuff as:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
+- [GraphCMS](https://graphcms.com/)
 - [Styled Components](https://styled-components.com/)
 - [Jest](https://jestjs.io/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- [Storybook](https://storybook.js.org/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
 ## Getting Started
 
-First, install dependencies:
+### GraphCMS
 
-```bash
-npm install
-# or
-yarn install
-```
+This project uses [GraphCMS](https://graphcms.com/), so you need to create an account there first.
 
-Second, run the development server:
+After you need to create the Schema, just follow the steps:
+
+- Schema > Add New Model with `Place` name
+- And add the following fields:
+
+  - `Single Line Text` as `name`
+  - `Slug` as `slug`
+  - `Map` as `location`
+  - `Rich Text` as `description`
+  - `Asset Picker` as `gallery`
+
+- Schema > Add New Model with `Page` name
+- And add the following fields:
+  - `Single Line Text` as `heading`
+  - `Slug` as `slug`
+  - `Rich Text` as `body`
+
+After that, fill some values and don't forget to `publish`!
+
+### Authentication
+
+In order to create a token access, go to `Settings > API Access`, inside this page, find `Permanent Auth Tokens`,
+create a Token Name and mark all queries possible. Save and get the token.
+
+### NextJS
+
+After creating your account on [GraphCMS](https://graphcms.com/) and following the steps above, you just need to rename
+the `.env.example` to `.env.local` (if you plan to run locally) and edit the keys there.
+
+With all set, you can start the application with:
 
 ```bash
 npm run dev
@@ -34,7 +65,47 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+## Running app
+
+Clone repository
+
+```bash
+git clone https://github.com/leticiafrontend/my-trips.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Set environment variables:
+
+```bash
+GRAPHQL_HOST= # This variable is the GraphCMS api endpoint.
+
+GRAPHQL_TOKEN= # This variable is the GraphCMS api token.
+
+NEXT_PUBLIC_MAPBOX_API_KEY= # This variable is the Mapbox api key.
+
+NEXT_PUBLIC_MAPBOX_USER_ID= # This variable is the Mapbox user id.
+
+NEXT_PUBLIC_MAPBOX_STYLE_ID= # This variable is the Mapbox api key.
+```
+
+Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Commands
 
@@ -44,51 +115,6 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 - `lint`: runs the linter in all components and pages
 - `test`: runs jest to test all components and pages
 - `test:watch`: runs jest in watch mode
-- `storybook`: runs storybook on `localhost:6006`
-- `build-storybook`: create the build version of storybook
-- `generate`: create folder with files for a component
-
-## Folder Architecture
-
-- <i>__ tests __</i>
-
-  > _Folder responsible for the storage of project tests_
-
-- _.github_
-  > _Folder responsible for the storage of dependabot settings_
-- _.husky_
-  > _Folder responsible for the storage of husky settings_
-- _.jest_
-  > _Folder responsible for the storage of tests settings_
-- _.storybook_
-  > _Folder responsible for the storage of storybook settings_
-- _generators_
-  > _Folder responsible for the storage of plop file templates_
-- _public_
-  > _Folder responsible for the storage of public files_
-- _src_
-  - _assets_
-
-    > _Folder responsible for the storage of images, svg's and fonts_
-    
-  - _components_
-    > _Folder responsible for the storage of components_
-  - _contexts_
-    > _Folder responsible for the storage of contexts_
-  - _hooks_
-    > _Folder responsible for the storage of hooks_
-  - _pages_
-    > _Folder responsible for the storage of pages_
-  - _services_
-    > _Folder responsible for the storage of services integration and requests_
-  - _styles_
-    > _Folder responsible for the storage of global styles_
-  - _themes_
-    > _Folder responsible for the storage of theme settings_
-  - _utils_
-    > _Folder responsible for the storage of utility functions_
-- _stories_
-  > _Folder responsible for the storage of storie in storybook_
 
 ## Learn More
 
