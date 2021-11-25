@@ -50,23 +50,6 @@ After that, fill some values and don't forget to `publish`!
 In order to create a token access, go to `Settings > API Access`, inside this page, find `Permanent Auth Tokens`,
 create a Token Name and mark all queries possible. Save and get the token.
 
-### NextJS
-
-After creating your account on [GraphCMS](https://graphcms.com/) and following the steps above, you just need to rename
-the `.env.example` to `.env.local` (if you plan to run locally) and edit the keys there.
-
-With all set, you can start the application with:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
 ## Running app
 
 Clone repository
@@ -96,6 +79,9 @@ NEXT_PUBLIC_MAPBOX_USER_ID= # This variable is the Mapbox user id.
 
 NEXT_PUBLIC_MAPBOX_STYLE_ID= # This variable is the Mapbox api key.
 ```
+
+After creating your account on [GraphCMS](https://graphcms.com/) and following the steps above, you just need to rename
+the `.env.example` to `.env.local` (if you plan to run locally) and edit the keys there.
 
 Run the development server:
 
